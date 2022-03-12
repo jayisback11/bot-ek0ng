@@ -21,7 +21,11 @@ client.on("messageCreate", (message) => {
 
   console.log(`${message.author.username}: ${message.content}`);
   if (Math.floor(Math.random() * 50) === 1) {
-    message.reply("la ako paki");
+    if(Math.floor(Math.random() * 1) === 0){
+      message.reply("la ako paki");
+    } else {
+      message.reply("isa ka nalang");
+    }
   } else if (
     message.author.username === "INCOGNITOJJ" &&
     Math.floor(Math.random() * 5) === 1
