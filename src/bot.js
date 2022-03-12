@@ -20,13 +20,14 @@ client.on("messageCreate", (message) => {
   if (message.author.bot) return;
 
   console.log(`${message.author.username}: ${message.content}`);
-  if (Math.floor(Math.random() * 50) === 1) {
-    if(Math.floor(Math.random() * 1) === 0){
-      message.reply("la ako paki");
-    } else {
-      message.reply("isa ka nalang");
-    }
-  } else if (
+  // if (Math.floor(Math.random() * 50) === 1) {
+  //   if(Math.floor(Math.random() * 1) === 0){
+  //     message.reply("la ako paki");
+  //   } else {
+  //     message.reply("isa ka nalang");
+  //   }
+  // } else
+  if (
     message.author.username === "INCOGNITOJJ" &&
     Math.floor(Math.random() * 5) === 1
   ) {
