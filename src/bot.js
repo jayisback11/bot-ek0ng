@@ -23,7 +23,7 @@ client.on("messageCreate", (message) => {
   if (Math.floor(Math.random() * 50) === 1) {
     message.reply("la ako paki");
   } else if (
-    message.author.username === "ek0ng" &&
+    message.author.username === "INCOGNITOJJ" &&
     Math.floor(Math.random() * 5) === 1
   ) {
     message.reply("sml");
