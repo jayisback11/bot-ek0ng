@@ -15,6 +15,7 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", (message) => {
+  console.log(`${message.author.username}: ${message.content}`);
   if (Math.floor(Math.random() * 50) === 1) {
     message.reply("la ako paki");
   } else if (
