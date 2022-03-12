@@ -30,7 +30,7 @@ client.on("messageCreate", (message) => {
   }
 
   // COMMANDS
-  if (message.content.startsWith(PREFIX)) {
+  else if (message.content.startsWith(PREFIX)) {
     const [CMD_NAME, ...args] = message.content
       .trim()
       .substring(PREFIX.length)
