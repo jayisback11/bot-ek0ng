@@ -11,7 +11,7 @@ const client = new Client({
 // When the client is ready, run this code (only once)
 client.on("ready", () => {
   console.log(`${client.user.username} has logged in!`);
-  bot.user.setUsername("BOT ek0ng");
+  client.user.setUsername("BOT ek0ng");
 });
 
 client.on("messageCreate", (message) => {
