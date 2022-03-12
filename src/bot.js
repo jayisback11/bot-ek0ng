@@ -8,6 +8,8 @@ const client = new Client({
   intents: [Intents.FLAGS.GUILDS, "GUILD_MESSAGES"]
 });
 
+const PREFIX = "$";
+
 // When the client is ready, run this code (only once)
 client.on("ready", () => {
   console.log(`${client.user.username} has logged in!`);
@@ -15,6 +17,8 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", (message) => {
+  if (message.author.bot) return;
+
   console.log(`${message.author.username}: ${message.content}`);
   if (Math.floor(Math.random() * 50) === 1) {
     message.reply("la ako paki");
@@ -23,6 +27,26 @@ client.on("messageCreate", (message) => {
     Math.floor(Math.random() * 5) === 1
   ) {
     message.reply("sml");
+  }
+
+  // COMMANDS
+  if (message.content.startsWith(PREFIX)) {
+    const [CMD_NAME, ...args] = message.content
+      .trim()
+      .substring(PREFIX.length)
+      .split(/\s+/);
+
+    if (CMD_NAME === "roll") {
+      if (args.length === 0 || args.length === 1)
+        return message.reply('Please provide a range. e.g "$roll 1 3"');
+      else {
+        min = Math.ceil(args[0]);
+        max = Math.floor(args[1]);
+        message.reply(
+          `Rolled: ${Math.floor(Math.random() * (max - min) + min)}`
+        );
+      }
+    }
   }
 });
 
