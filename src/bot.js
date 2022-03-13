@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import { Client, Intents, ClientPresence, VoiceChannel } from "discord.js";
 import { rollNumber } from "./roll.js";
 import { pickUser } from "./pick.js";
+import { coinflip } from "./coinflip.js";
 dotenv.config();
 
 // client is a instance of Client class
@@ -34,6 +35,8 @@ client.on("messageCreate", (message) => {
       rollNumber(message, args);
     } else if (CMD_NAME === "pick") {
       pickUser(message);
+    } else if (CMD_NAME === "flip") {
+      coinflip(message);
     }
   }
 
