@@ -50,20 +50,12 @@ client.on("messageCreate", (message) => {
   } else if (message.author.username === "Darren" && fivePercentChange === 1) {
     if (indexOfPhrase === 0) {
       message.reply("chill lang");
-    } else {
-      message.reply("nakoww");
-    }
+    } 
   } else if (message.author.username === "ek0ng" && fivePercentChange === 1) {
     if (indexOfPhrase === 0) {
       message.reply("wassup boss");
     }
-  } else if (message.author.username === "JF" && fivePercentChange === 1) {
-    if (indexOfPhrase === 0) {
-      message.reply("sire, your food 🍔 is ready ");
-    } else {
-      message.reply("my majesty 👑");
-    }
-  }
+  } 
 });
 
 client.login(process.env.DISCORD_TOKEN);
