@@ -4,7 +4,7 @@ function rollNumber(message, args) {
   else {
     const min = Math.ceil(args[0]);
     const max = Math.floor(args[1]);
-    message.reply(`🎲 ${Math.floor(Math.random() * (max - min) + min)}`);
+    message.reply(`🎲 Rolled: ${Math.floor(Math.random() * (max - min) + min)}`);
   }
 }
 
