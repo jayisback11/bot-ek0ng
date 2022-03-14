@@ -23,7 +23,7 @@ client.on("ready", () => {
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
   const indexOfPhrase = Math.floor(Math.random() * 2);
-  const fivePercentChange = Math.floor(Math.random() * 20);
+  const onePercentChange = Math.floor(Math.random() * 100);
   // COMMANDS
   if (message.content.startsWith(PREFIX)) {
     const [CMD_NAME, ...args] = message.content
@@ -43,18 +43,18 @@ client.on("messageCreate", (message) => {
   // MESSAGES
   else if (
     message.author.username === "INCOGNITOJJ" &&
-    fivePercentChange === 1
+    onePercentChange === 1
   ) {
     if (indexOfPhrase === 0) {
       message.reply("sml");
     } else {
       message.reply("wehh");
     }
-  } else if (message.author.username === "Darren" && fivePercentChange === 1) {
+  } else if (message.author.username === "Darren" && onePercentChange === 1) {
     if (indexOfPhrase === 0) {
       message.reply("chill lang");
     } 
-  } else if (message.author.username === "ek0ng" && fivePercentChange === 1) {
+  } else if (message.author.username === "ek0ng" && onePercentChange === 1) {
     if (indexOfPhrase === 0) {
       message.reply("wassup boss");
     }
