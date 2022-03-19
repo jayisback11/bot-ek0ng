@@ -39,26 +39,6 @@ client.on("messageCreate", (message) => {
       coinflip(message);
     }
   }
-
-  // MESSAGES
-  else if (
-    message.author.username === "INCOGNITOJJ" &&
-    onePercentChange === 1
-  ) {
-    if (indexOfPhrase === 0) {
-      message.reply("sml");
-    } else {
-      message.reply("wehh");
-    }
-  } else if (message.author.username === "Darren" && onePercentChange === 1) {
-    if (indexOfPhrase === 0) {
-      message.reply("chill lang");
-    } 
-  } else if (message.author.username === "ek0ng" && onePercentChange === 1) {
-    if (indexOfPhrase === 0) {
-      message.reply("wassup boss");
-    }
-  } 
 });
 
 client.login(process.env.DISCORD_TOKEN);
